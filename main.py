@@ -96,6 +96,15 @@ def main(page: ft.Page):
     hotel.adicionar_cliente(Cliente("Alice Silva", "99999-1234", "alice@email.com"))
     hotel.adicionar_cliente(Cliente("Bruno Lima", "98888-5678", "bruno@email.com"))
 
+    cliente_alice = hotel.clientes[0]
+    cliente_bruno = hotel.clientes[1]
+
+    quarto_101 = hotel.quartos[0]
+    quarto_102 = hotel.quartos[1]
+
+    hotel.criar_reserva(cliente_alice, quarto_101, "2025-02-13", "2025-02-20")
+    hotel.criar_reserva(cliente_bruno, quarto_102, "2025-02-14", "2025-02-21")
+
     def atualizar_lista_quartos():
         lista_quartos.controls.clear()
         for quarto in hotel.quartos:
